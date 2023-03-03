@@ -140,6 +140,7 @@ function App() {
             label="First Name"
             value={engFirstNameHook.value}
             onChange={engFirstNameHook.changeValue}
+            maxLength={20}
           />
           <DtrTextField
             type="text"
@@ -149,6 +150,7 @@ function App() {
             label="Last Name"
             value={engLastNameHook.value}
             onChange={engLastNameHook.changeValue}
+            maxLength={20}
           />
         </DtrBox>
         <DtrBox mt="16px" _display="flex" gap="8px" align="center start">
@@ -161,6 +163,7 @@ function App() {
               label="이름"
               value={korNameHook.value}
               onChange={korNameHook.changeValue}
+              maxLength={20}
             />
           </DtrBox>
           <DtrBox
@@ -199,6 +202,7 @@ function App() {
             label="email"
             value={emailHook.value}
             onChange={emailHook.changeValue}
+            maxLength={100}
           />
         </DtrBox>
       </DtrBox>
