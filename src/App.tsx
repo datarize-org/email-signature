@@ -98,7 +98,7 @@ function App() {
     }
 
     if (cleanPhoneString[0] === "0") {
-      result = "+82."
+      result = "(+82)"
     }
     // 010
     if (cleanPhoneString.length < 4) {
@@ -225,7 +225,7 @@ function App() {
                 } ${korNameHook.value || "-"}`}</strong>
               </p>
               <p style={{ margin: 0, fontSize: "14px" }}>
-                <strong>{`${dropdownHook.selected.item}`}</strong>
+                {`${dropdownHook.selected.item}`}
               </p>
               <p style={{ margin: 0, fontSize: "13px", marginTop: "2px" }}>
                 <strong>M.</strong>{" "}
