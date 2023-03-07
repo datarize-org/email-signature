@@ -1,5 +1,6 @@
 import {
   DtrBox,
+  DtrButton,
   DtrDropdown,
   DtrTextField,
   DtrTypo,
@@ -125,6 +126,19 @@ function App() {
     return result
   }
 
+  const handleCopy = async () => {
+    try {
+      const htmlCode = document.getElementById("dtr-email-signature")!.innerHTML
+      const blobInput = new Blob([htmlCode], { type: "text/html" })
+      await navigator.clipboard.write([
+        new ClipboardItem({ "text/html": blobInput }),
+      ])
+      alert("Copied")
+    } catch (e) {
+      alert(e)
+    }
+  }
+
   return (
     <DtrBox _display="flex" flow="column" pd="8px" align="center">
       <DtrTypo _type="header6" weight="medium" _color="brand_black_1100">
@@ -213,11 +227,16 @@ function App() {
         flow="column"
         pd="16px"
       >
-        <DtrTypo _type="subtitle4" weight="regular" _color="brand_black_1000">
-          결과 (아래 내용을 복사해서 메일 서명에 붙여 넣으세요)
-        </DtrTypo>
-        <DtrBox bd="1px solid brand_black_300" pd="24px">
-          <div>
+        <DtrBox _display="flex" align="center space-between">
+          <DtrTypo _type="subtitle4" weight="regular" _color="brand_black_1000">
+            결과 (아래 내용을 복사해서 메일 서명에 붙여 넣으세요)
+          </DtrTypo>
+          <DtrButton _size="large" variant="fill" onClick={handleCopy}>
+            복사하기
+          </DtrButton>
+        </DtrBox>
+        <DtrBox mt="16px" bd="1px solid brand_black_300" pd="24px">
+          <div id="dtr-email-signature">
             <div style={{ fontFamily: '"arial", sans-serif' }}>
               <p style={{ margin: 0, fontSize: "14px" }}>
                 <strong>{`${engFirstNameHook.value || "-"} ${
