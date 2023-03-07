@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/email-signature/static/js/main.713e60a0.js",
+    "main.js": "/email-signature/static/js/main.5946dcb6.js",
     "index.html": "/email-signature/index.html",
-    "main.713e60a0.js.map": "/email-signature/static/js/main.713e60a0.js.map"
+    "main.5946dcb6.js.map": "/email-signature/static/js/main.5946dcb6.js.map"
   },
   "entrypoints": [
-    "static/js/main.713e60a0.js"
+    "static/js/main.5946dcb6.js"
   ]
 }
