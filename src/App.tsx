@@ -36,6 +36,7 @@ function App() {
     { id: "Product Manager", name: "Product Manager", item: "Product Manager" },
     { id: "QA Manager", name: "QA Manager", item: "QA Manager" },
     { id: "CX Manager", name: "CX Manager", item: "CX Manager" },
+    { id: "Sales Manager", name: "Sales Manager", item: "Sales Manager" },
     { id: "Account Manager", name: "Account Manager", item: "Account Manager" },
     { id: "Finance Manager", name: "Finance Manager", item: "Finance Manager" },
     { id: "HR&GA Manager", name: "HR&GA Manager", item: "HR&GA Manager" },
